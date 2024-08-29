@@ -11,9 +11,10 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  timeout: 960000,
-  testDir: './tests',
+    testDir: './tests',
   /* Run tests in files in parallel */
+  // timeout: 5 * 1000,
+  // expect: { timeout: 960000 },
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
